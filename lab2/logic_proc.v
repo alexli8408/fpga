@@ -1,0 +1,18 @@
+module logic_proc (
+	input [3:0] logic_in0,
+	input [3:0] logic_in1,
+	input [1:0] select,
+	output [3:0] logic_out
+);
+
+	wire [3:0] mux1_out, mux2_out, mux3_out;
+	
+	assign mux1_out = (select[0] == 1'b0) ? (logic_in0 & logic_in1) : (logic_in0 | logic_in1);
+	
+	assign mux2_out = (select[0] == 1'b0) ? (logic_in0 ^ logic_in1) : ~(logic_in0 ^ logic_in1);
+	
+	assign mux3_out = (select[1] == 1'b0) ? mux1_out : mux2_out;
+	
+	assign logic_out = mux3_out;
+	
+endmodule

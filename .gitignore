@@ -1,0 +1,10 @@
+# Quartus/Hardware build files
+db/
+incremental_db/
+output_files/
+simulation/
+*.qws
+*.sof
+*.pof
+*.smsg
+*.qdf
