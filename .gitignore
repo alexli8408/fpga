@@ -8,3 +8,4 @@ simulation/
 *.pof
 *.smsg
 *.qdf.DS_Store
+.DS_Store
